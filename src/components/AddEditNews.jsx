@@ -1,46 +1,40 @@
 import React, { useState } from 'react';
-import '../css/EditNews.css'; 
-
+import styles from '../css/AddEditNews.module.css';
 
 const AddEditNews = () => {
-  const [title, setTitle] = useState(''); 
+  const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [data, setData] = useState('');
 
   const handleSave = () => {
-    // Função para salvar a notícia
-    console.log('Salvando notícia', { title, description, Data });
+    console.log('Salvando notícia', { title, description, data });
   };
-  
-    <div>
-    <h1>Adicionar Noticia</h1>
-    </div>
 
   return (
-      
-    <div>
+    <div className={styles.container}>
+      <h1>Adicionar Notícia</h1>
       <input
         type="text"
         placeholder="Título"
         value={title}
+        className={styles.input}
         onChange={(e) => setTitle(e.target.value)}
       />
       <textarea
         placeholder="Descrição"
         value={description}
+        className={`${styles.textarea} ${styles.input}`}
         onChange={(e) => setDescription(e.target.value)}
       />
       <input
         type="text"
         placeholder="Data"
         value={data}
+        className={styles.input}
         onChange={(e) => setData(e.target.value)}
       />
-      
-      <button onClick={handleSave}>Salvar</button>
-
+      <button onClick={handleSave} className={styles.button}>Salvar</button>
     </div>
-    
   );
 };
 

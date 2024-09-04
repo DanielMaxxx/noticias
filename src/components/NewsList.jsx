@@ -13,8 +13,8 @@ const NewsList = () => {
   ];
 
   return (
-    <div>
-      {newsData.map((news, index) => (
+    <div> 
+      {newsData.map((news, index) => (  
         <NewsItem key={index} news={news} />
       ))}
       <AccordionBody />
