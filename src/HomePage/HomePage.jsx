@@ -4,7 +4,8 @@ import NewsList from '../components/NewsList';
 const HomePage = () => {
   return (
     <div>
-      <h1>Notícias</h1>
+      
+      <h1 id='noticias'>Noticias</h1>
       <NewsList />
       
     </div>

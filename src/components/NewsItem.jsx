@@ -2,10 +2,15 @@ import React from 'react';
 
 const NewsItem = ({ news }) => {
   return (
-    <div style={{ marginBottom: '10px', border: '1px solid #ddd', padding: '10px', borderRadius: '8px' }}>
-      <h3>{news.date}</h3>
-      <h4>{news.title}</h4>
-      <p>{news.description}</p>
+    <div className="news-item">
+      <div className="date-box">
+        <div className="date">{news.date.split(' ')[0]}</div>
+        <div className="month">{news.date.split(' ')[1]}</div>
+      </div>
+      <div className="content">
+        <h3 className="title">{news.title}</h3>
+        <p className="description">{news.description}</p>
+      </div>
     </div>
   );
 };
