@@ -1,5 +1,6 @@
 import React from 'react';
 import NewsItem from './NewsItem';
+import AccordionBody from './Accordion';
 
 const NewsList = () => {
   const newsData = [
@@ -16,6 +17,7 @@ const NewsList = () => {
       {newsData.map((news, index) => (
         <NewsItem key={index} news={news} />
       ))}
+      <AccordionBody />
     </div>
   );
 };
